@@ -3,11 +3,18 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes = [{
-    path:'/',
-    name:'Index',
-    component:()=>import('../views/Index')
-}]
+const routes = [
+    {
+        path:'/',
+        name:'Index',
+        component:()=>import('../views/Index')
+    },
+    {
+        path:'/header',
+        name:'Header',
+        component:()=>import('../views/Header')
+    }
+]
 
 const router = new VueRouter({mode:'hash',routes});
 router.beforeEach((to,from,next)=>{
